@@ -124,7 +124,7 @@ export default ({ data }) => {
      <h1>My WordPress Blog</h1>
      <h4>Posts</h4>
      {data.allWordpressPost.edges.map(({ node }) => (
-       <div>
+       <div key={node.id}>
          <p>{node.title}</p>
          <div dangerouslySetInnerHTML={{__html: node.excerpt}}/>
        </div>
